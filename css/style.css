@@ -136,7 +136,7 @@ body {
 }
 
 .navbar {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     width: 100%;
     position: fixed;
     top: 0;
@@ -285,6 +285,7 @@ body {
     color: aquamarine;
 }
 
+
 .skills {
     color: rgb(226, 214, 199);
     margin-top: 50px;
@@ -302,17 +303,22 @@ body {
 }
 
 .about {
-    margin-top: 200px;
+    max-width: 1400px;
     color: antiquewhite;
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
 }
+
 
 .about__profile {
     position: absolute;
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
-    left: 330px;
+    left: 50%;
     font-size: 33px;
     -webkit-text-stroke: 8px #3c2e2833;
     text-transform: capitalize;
@@ -324,20 +330,41 @@ body {
 
 .about__image {
     opacity: 0.3;
+    width: 90%;
+}
+
+@media (max-width: 900px) {
+    .about__profile {
+        font-size: 22px;
+        width: 60%;
+        left: 50%;
+        max-width: 350px;
+    }
+
+    .programs {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        top: o;
+    }
+
+    .programs__html {
+        margin-bottom: 30px;
+    }
+
+    .programs__css {
+        margin-bottom: 30px;
+    }
+
+    .programs__git-hub {
+        margin-bottom: 30px;
+    }
 }
 
 
 /* Мои работы - проекты */
 
 .project {
-    /* margin-top: 100px;
-    width: 100%;
-    min-height: 100vh;
-    top: 0;
-    transition: 1s;
-    opacity: 0; */
-
-
     width: 100%;
     height: 100vh;
     padding: 0 150px;
@@ -346,12 +373,29 @@ body {
     transition: 1s;
 }
 
+.project__heading {
+    padding-top: 100px;
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.project__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+}
+
 .project__image {
     transition: .5s;
     object-fit: cover;
     left: 0;
     top: 0;
-    width: 550px;
 }
 
 .project__travel {
@@ -410,26 +454,14 @@ body {
 }
 
 .project__info {
-    margin: 40px;
-    font-size: 20px;
-    line-height: 25px;
+    margin: 25px;
+    line-height: 22px;
     text-align: center;
     -webkit-text-stroke: 3px #4f3c3433;
     text-transform: capitalize;
     background: #635b5b;
     color: #e6ffff;
     -webkit-background-clip: text;
-}
-
-
-.project__mesto {
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-.project__dogs {
-    font-size: 30px;
-    margin-bottom: 30px;
 }
 
 .project__travel:hover .project__image {
@@ -442,19 +474,6 @@ body {
 
 .project__dogs:hover .project__image {
     filter: blur(15px);
-}
-
-
-.project__heading {
-    padding-top: 100px;
-    font-size: 100px;
-    background: #252525;
-    text-transform: capitalize;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #1a1a1a;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 8px transparent;
 }
 
 .project__btn {
@@ -473,22 +492,81 @@ body {
     position: absolute;
 }
 
-.project__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
+@media (max-width: 900px) {
+    .project__container {
+        display: block;
+    }
+
+    .project__travel {
+        margin-bottom: 50px;
+    }
+
+    .project__mesto {
+        margin-bottom: 100px;
+    }
 }
 
 /* ---------------------------------------------------------- */
 /* form */
 
 .contact {
-    font-size: 40px;
+    padding-top: 150px;
     color: white;
-    margin-top: 200px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+    transition: 1s;
 }
 
 .contact__telegram {
     text-decoration: none;
     color: white;
+}
+
+@media only screen {
+
+    html,
+    body {
+        background: #222;
+        /* overflow: hidden; */
+        height: 100%;
+    }
+
+    .contact,
+    .contact__telegram {
+        font-size: 60px;
+        font-family: 'sonos-logoregular';
+        background: -webkit-linear-gradient(left, #33235B, #878484, #82eccf, #33235B);
+        background: linear-gradient(left, #33235B, #3edcf5, #f4e7e1, #33235B);
+        background-size: 3200px 200px;
+        color: transparent;
+        -webkit-background-clip: text;
+        -webkit-animation: animate-contact;
+        -webkit-animation-delay: 0;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: forwards;
+        transition: font-size 500ms ease-in-out;
+    }
+}
+
+@-webkit-keyframes animate-contact {
+    0% {
+        background-position: 0 3200px;
+    }
+
+    100% {
+        background-position: 3200px 0;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .contact,
+    .contact__telegram {
+        font-size: 30px;
+    }
 }
