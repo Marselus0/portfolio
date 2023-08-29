@@ -24,7 +24,7 @@ let popup = document.querySelector('#popup');
 let menu = document.querySelector('.link-group').cloneNode(1);
 let body = document.body;
 
-hamb.addEventListener('click',hambHandler);
+hamb.addEventListener('click', hambHandler);
 
 function hambHandler(e) {
     e.preventDefault();
@@ -38,14 +38,31 @@ function renderPopup() {
     popup.appendChild(menu);
 }
 
-let linksMenu  = Array.from(menu.children);
+let linksMenu = Array.from(menu.children);
 
 linksMenu.forEach((link) => {
     link.addEventListener('click', closeOnClick);
 })
 
-function closeOnClick(){
+function closeOnClick() {
     popup.classList.remove('open');
     hamb.classList.remove('active');
     body.classList.remove('noscroll');
 }
+
+// Слайдер about
+let images = document.querySelectorAll('.about__image img');
+
+let timerId = setTimeout(function tick() {
+    console.log('tick');
+
+    images[i].className = '';
+
+    i = i + 1;
+    if (i >= images.length) {
+        i = 0;
+    }
+    images[i].className = 'shown';
+
+    timerId = setTimeout(tick, 2000); // (*)
+}, 2000);

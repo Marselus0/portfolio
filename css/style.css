@@ -329,8 +329,25 @@ body {
 }
 
 .about__image {
-    opacity: 0.3;
-    width: 90%;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about__image img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    object-fit: cover;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.about__image img.shown {
+   opacity: 0.3;
 }
 
 @media (max-width: 900px) {
