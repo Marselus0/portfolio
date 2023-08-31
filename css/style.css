@@ -306,8 +306,6 @@ body {
 
 .about__profile {
     position: absolute;
-    max-width: 500px;
-    width: 100%;
     margin: 0 auto;
     left: 50%;
     font-size: 33px;
@@ -344,9 +342,7 @@ body {
 @media (max-width: 900px) {
     .about__profile {
         font-size: 22px;
-        width: 60%;
         left: 50%;
-        max-width: 350px;
     }
 
     .programs {
@@ -404,7 +400,7 @@ body {
     object-fit: cover;
     left: 0;
     top: 0;
-    width: 90%;
+    width: 100%;
 }
 
 .project__travel {
@@ -501,7 +497,7 @@ body {
     position: absolute;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 500px) and (max-width: 900px) {
     .project__container {
         display: block;
     }
@@ -511,19 +507,59 @@ body {
     }
 
     .project__mesto {
-        margin-bottom: 100px;
+        margin: 100px 0;
     }
 
     .project__info {
-        max-width: 300px;
-        font-size: 10px;
+        max-width: 400px;
+        font-size: 12px;
+        line-height: 9px;
     }
 
     .project__name {
-        font-size: 25px;
+        font-size: 21px;
     }
+
     .project__heading {
         font-size: 50px;
+    }
+
+    .project__btn-github {
+        width: 100px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project__container {
+        display: block;
+    }
+
+    .project__info {
+        max-width: 400px;
+        font-size: 7px;
+        line-height: 7px;
+    }
+
+    .project__name {
+        font-size: 16px;
+    }
+
+    .project__heading {
+        font-size: 40px;
+    }
+
+    .project__btn-github {
+        width: 80px;
+        font-size: 9px;
+    }
+
+    .project__travel {
+        margin-bottom: 50px;
+    }
+
+    .project__mesto {
+        margin: 100px 0;
     }
 }
 

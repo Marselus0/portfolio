@@ -53,6 +53,8 @@ function closeOnClick() {
 // Слайдер about
 let images = document.querySelectorAll('.about__image img');
 
+let i = 0;
+
 let timerId = setTimeout(function tick() {
     console.log('tick');
 
