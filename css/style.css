@@ -319,6 +319,7 @@ body {
 
 .about__image {
     width: 100%;
+    width: 600px;
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -332,14 +333,16 @@ body {
     opacity: 0;
     object-fit: cover;
     height: 100%;
+    width: 100%;
     transition: 0.5s;
 }
 
 .about__image img.shown {
     opacity: 0.3;
+    height: 100%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .about__profile {
         font-size: 22px;
         left: 50%;
@@ -362,6 +365,13 @@ body {
 
     .programs__git-hub {
         margin-bottom: 30px;
+    }
+    .about__image {
+        width: 100%;
+        width: 500px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
     }
 }
 
