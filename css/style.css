@@ -342,6 +342,11 @@ body {
     height: 100%;
 }
 
+.style__link {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 800px) {
     .about__profile {
         font-size: 22px;
@@ -366,6 +371,7 @@ body {
     .programs__git-hub {
         margin-bottom: 30px;
     }
+
     .about__image {
         width: 100%;
         width: 500px;
