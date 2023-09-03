@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalaizes.css">
+</head>
+
+
+<body class="body">
+    <div class='header__logo'>
+        <div class='header__title'></div>
+    </div>
+    <div class="navbar__wrap">
+        <div class="hamb">
+            <div class="hamb__field" id="hamb">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="link-group">
+                <li class="link"><a href="./index.html">Главная</a></li>
+                <li class="link"><a href="./project.html">Портфолио</a></li>
+                <li class="link"><a href="./about.html">Обо мне</a></li>
+                <li class="link"><a href="./contacts.html">Контакты</a></li>
+                <li class="link"><a href="./calc.html">Калькулятор</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="popup" id="popup"></div>
+
+    <header class='header'>
+        <div class="header__container">
+            <div class="header__content">
+                <h1> Калькулятор стоимости услуг</h1>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <div class="calc">
+                    <div class="calc__fieldset">
+                        <label for="" class="calc__label">Количество страниц</label>
+                        <input tybe="number" class="calc__inp" id="page" value="0" min="0" max="30">
+                    </div>
+                    <div class="calc__fieldset">
+                        <label for="" class="calc__label">Сроки выполнения работы</label>
+                        <input tybe="number" class="calc__inp" id="term" value="0" min="0" max="31">
+                    </div>
+                    <div class="calc__fieldset">
+                        <label for="" class="calc__label">Процент наполнения контента</label>
+                        <select name="" id="">
+                            <option value="0">---</option>
+                            <option value="1">20% (500)</option>
+                            <option value="2">40% (1000)</option>
+                            <option value="3">60% (1500)</option>
+                            <option value="4">80% (2000)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc__fieldset">
+                        <div class="calc__total">Стоимость <span id="totalCost" style="font-weight: bold" ;>X</span>
+                            руб.</div>
+                    </div>
+
+                    <dic class="calc__fieldset">
+                        <div class="calc__text">Текст про офер от менеджера</div>
+                    </dic>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__wrap">
+            <div id="slider__viewport" class="slider__viewport">
+                <div class="slider">
+                    <div class="slide"><img src="./img/img1.jpg" alt=""></div>
+                    <div class="slide"><img src="./img/img2.jpg" alt=""></div>
+                    <div class="slide"><img src="./img/img3.jpg" alt=""></div>
+                    <div class="slide"><img src="./img/img4.jpg" alt=""></div>
+                    <div class="slide"><img src="./img/img5.jpg" alt=""></div>
+                    <div class="slide"><img src="./img/img6.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="slider__control">
+                <button class="slider__control-button slider__control-prev" id="slider__control-prev">Назад</button>
+                <button class="slider__control-button slider__control-next" id="slider__control-next">Вперёд</button>
+            </div>
+
+            <div class="slider__pagination">
+                <div id="viewSlider">
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./script/app.js"></script>
+
+</html>
