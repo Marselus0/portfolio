@@ -653,6 +653,13 @@
 }
 
 /* --------Дополнительная страница---------------------------- */
+
+.header__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
 .main {
     max-width: 1400px;
     width: 100%;
@@ -662,11 +669,28 @@
 .container {
     color: white;
     margin-top: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .header__container {
     padding-top: 100px;
     color: white;
+}
+
+.calc__fieldset {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calc__label {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.calc__inp {
+    width: 200px;
 }
 
 
@@ -683,8 +707,6 @@
 
 .slider__viewport {
     margin: 0 auto 20px;
-    width: 100%;
-    height: 450px;
     overflow: hidden;
     background: #eee;
 }
@@ -701,7 +723,7 @@
 
 .slide {
     width: 100%;
-    height: 450px;
+    height: 100%;
 }
 
 .slide img {

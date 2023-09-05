@@ -46,16 +46,18 @@
             <div class="content">
                 <div class="calc">
                     <div class="calc__fieldset">
-                        <label for="" class="calc__label">Количество страниц</label>
-                        <input tybe="number" class="calc__inp" id="page" value="0" min="0" max="30">
+                        <label for="" class="calc__label">Площадь дома</label>
+                        <input type="number" class="calc__inp" id="page" value="0" min="0" max="30"
+                            onchange='calculateCost();'>
                     </div>
                     <div class="calc__fieldset">
-                        <label for="" class="calc__label">Сроки выполнения работы</label>
-                        <input tybe="number" class="calc__inp" id="term" value="0" min="0" max="31">
+                        <label for="" class="calc__label">Кол-во этажей</label>
+                        <input type="number" class="calc__inp" id="term" value="0" min="0" max="100"
+                            onchange='calculateCost();'>
                     </div>
                     <div class="calc__fieldset">
                         <label for="" class="calc__label">Процент наполнения контента</label>
-                        <select name="" id="">
+                        <select name="" id="calc__inp" id="percent" onchange='calculateCost();'>
                             <option value="0">---</option>
                             <option value="1">20% (500)</option>
                             <option value="2">40% (1000)</option>
@@ -65,13 +67,9 @@
                     </div>
 
                     <div class="calc__fieldset">
-                        <div class="calc__total">Стоимость <span id="totalCost" style="font-weight: bold" ;>X</span>
+                        <div class="calc__total">Стоимость <span id="totalCost" style="font-weight: bold" ;>0</span>
                             руб.</div>
                     </div>
-
-                    <dic class="calc__fieldset">
-                        <div class="calc__text">Текст про офер от менеджера</div>
-                    </dic>
                 </div>
             </div>
         </div>
