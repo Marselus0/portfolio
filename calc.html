@@ -37,7 +37,7 @@
     <header class='header'>
         <div class="header__container">
             <div class="header__content">
-                <h1> Калькулятор стоимости услуг</h1>
+                <h1>Калькулятор стоимости услуг</h1>
             </div>
         </div>
     </header>
@@ -46,18 +46,18 @@
             <div class="content">
                 <div class="calc">
                     <div class="calc__fieldset">
-                        <label for="" class="calc__label">Площадь дома</label>
-                        <input type="number" class="calc__inp" id="page" value="0" min="0" max="30"
+                        <label for="" class="calc__label">Количество страниц</label>
+                        <input type="number" class="calc__inp" id="pageSide" value="0" min="0" max="3000"
                             onchange='calculateCost();'>
                     </div>
                     <div class="calc__fieldset">
-                        <label for="" class="calc__label">Кол-во этажей</label>
-                        <input type="number" class="calc__inp" id="term" value="0" min="0" max="100"
+                        <label for="" class="calc__label">Сроки исполнения работы</label>
+                        <input type="number" class="calc__inp" id="timeWork" value="0" min="0" max="113"
                             onchange='calculateCost();'>
                     </div>
                     <div class="calc__fieldset">
                         <label for="" class="calc__label">Процент наполнения контента</label>
-                        <select name="" id="calc__inp" id="percent" onchange='calculateCost();'>
+                        <select name="" class="calc__inp" id="percentWork" onchange='calculateCost();'>
                             <option value="0">---</option>
                             <option value="1">20% (500)</option>
                             <option value="2">40% (1000)</option>
@@ -65,42 +65,40 @@
                             <option value="4">80% (2000)</option>
                         </select>
                     </div>
-
-                    <div class="calc__fieldset">
-                        <div class="calc__total">Стоимость <span id="totalCost" style="font-weight: bold" ;>0</span>
-                            руб.</div>
+                    <div class="calc__price">
+                        <div class="calc__total">Цена <span id="totalCost" style="font-weight: bold;">Х</span> руб</div>
                     </div>
                 </div>
-            </div>
-        </div>
+                
+                <div class="slider__wrap">
+                    <div id="slider__viewport" class="slider__viewport">
+                        <div class="slider">
+                            <div class="slide"><img src="./img/img1.jpg" alt=""></div>
+                            <div class="slide"><img src="./img/img2.jpg" alt=""></div>
+                            <div class="slide"><img src="./img/img3.jpg" alt=""></div>
+                            <div class="slide"><img src="./img/img4.jpg" alt=""></div>
+                            <div class="slide"><img src="./img/img5.jpg" alt=""></div>
+                            <div class="slide"><img src="./img/img6.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="slider__control">
+                        <button class="slider__control-button slider__control-prev"
+                            id="slider__control-prev">Назад</button>
+                        <button class="slider__control-button slider__control-next"
+                            id="slider__control-next">Вперёд</button>
+                    </div>
 
-        <div class="slider__wrap">
-            <div id="slider__viewport" class="slider__viewport">
-                <div class="slider">
-                    <div class="slide"><img src="./img/img1.jpg" alt=""></div>
-                    <div class="slide"><img src="./img/img2.jpg" alt=""></div>
-                    <div class="slide"><img src="./img/img3.jpg" alt=""></div>
-                    <div class="slide"><img src="./img/img4.jpg" alt=""></div>
-                    <div class="slide"><img src="./img/img5.jpg" alt=""></div>
-                    <div class="slide"><img src="./img/img6.jpg" alt=""></div>
+                    <div class="slider__pagination">
+                        <div id="viewSlider">
+                            <div class="viewSlide"></div>
+                            <div class="viewSlide"></div>
+                            <div class="viewSlide"></div>
+                            <div class="viewSlide"></div>
+                            <div class="viewSlide"></div>
+                            <div class="viewSlide"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="slider__control">
-                <button class="slider__control-button slider__control-prev" id="slider__control-prev">Назад</button>
-                <button class="slider__control-button slider__control-next" id="slider__control-next">Вперёд</button>
-            </div>
-
-            <div class="slider__pagination">
-                <div id="viewSlider">
-                    <div class="viewSlide"></div>
-                    <div class="viewSlide"></div>
-                    <div class="viewSlide"></div>
-                    <div class="viewSlide"></div>
-                    <div class="viewSlide"></div>
-                    <div class="viewSlide"></div>
-                </div>
-            </div>
-        </div>
     </main>
 </body>
 <script src="./script/app.js"></script>

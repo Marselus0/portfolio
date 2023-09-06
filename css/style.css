@@ -451,9 +451,7 @@
 }
 
 .project__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 60px;
+    max-width: 1200px;
 }
 
 .project__image {
@@ -465,25 +463,23 @@
 }
 
 .project__travel {
-    max-width: 800px;
-    /* height: 400px; */
     position: relative;
     display: flex;
     align-items: center;
 }
 
 .project__mesto {
-    max-width: 800px;
     position: relative;
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
 
 .project__dogs {
-    max-width: 800px;
     position: relative;
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
 
 .project__travel:hover .project__content {
@@ -506,25 +502,25 @@
 }
 
 .project__name {
-    font-size: 40px;
-    background: #635b5b;
+    font-size: 60px;
+    background: #000000;
     text-transform: capitalize;
     margin: 20px;
-    color: #e6ffff;
+    color: #dcfff7;
     -webkit-background-clip: text;
-    -webkit-text-stroke: 4px transparent;
-    font-weight: 200;
+    -webkit-text-stroke: 3px transparent;
+    font-weight: 300;
 }
 
 .project__info {
-    font-size: 15px;
+    font-size: 35px;
     margin: 25px;
-    line-height: 22px;
+    line-height: 35px;
     text-align: center;
-    -webkit-text-stroke: 3px #4f3c3433;
+    -webkit-text-stroke: 3px #0000002f;
     text-transform: capitalize;
-    background: #635b5b;
-    color: #e6ffff;
+    background: #000000;
+    color: #ffffff;
     -webkit-background-clip: text;
 }
 
@@ -572,11 +568,11 @@
     .project__info {
         max-width: 400px;
         font-size: 12px;
-        line-height: 9px;
+        line-height: 20px;
     }
 
     .project__name {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .project__heading {
@@ -597,7 +593,7 @@
     .project__info {
         max-width: 400px;
         font-size: 7px;
-        line-height: 7px;
+        line-height: 8px;
     }
 
     .project__name {
@@ -624,23 +620,37 @@
 
 /* ---------------------------------------------------------- */
 /* form */
+
+.contacts__conteiner {
+    width: 100%;
+    padding-top: 150px;
+    position: relative;
+}
+
+.contacts__image {
+    max-width: 80%;
+    opacity: 0.3;
+    position: relative;
+    left: 500px;
+}
+
 .contacts__title {
     font-size: 55px;
     color: #96eee7f6;
-    padding-top: 150px;
     padding-left: 50px;
     left: 50px;
     padding-bottom: 50px;
+    position: absolute;
 }
 
 .contact {
     color: white;
-    width: 100%;
-    height: 100vh;
+    max-width: 600px;
     align-items: center;
-    position: relative;
     transition: 1s;
-    left: 50px;
+    padding-top: 100px;
+    padding-left: 50px;
+    position: absolute;
 }
 
 .contact__link {
@@ -673,12 +683,20 @@
     .contact__email {
         max-width: 500px;
     }
+
+    .contacts__image {
+        left: 300px;
+    }
 }
 
 @media (max-width: 500px) {
 
     .contact__link {
         font-size: 15px;
+    }
+
+    .contact {
+        padding-top: 50px;
     }
 
     .contacts__title {
@@ -690,6 +708,13 @@
     .contact__address,
     .contact__email {
         max-width: 320px;
+    }
+
+    .contacts__image {
+        max-width: 70%;
+        opacity: 0.3;
+        position: relative;
+        left: 200px;
     }
 }
 
@@ -714,14 +739,9 @@
     margin: 0 auto;
 }
 
-.header__container {
-    padding-top: 100px;
-    color: white;
-}
-
 .calc__fieldset {
-    display: flex;
-    align-items: center;
+    display: inline-grid;
+    justify-items: center;
     margin-bottom: 20px;
 }
 
@@ -734,6 +754,24 @@
     width: 200px;
 }
 
+.header__content {
+    padding-top: 100px;
+    color: white;
+    font-size: 30px;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+}
+
+.calc {
+    font-size: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    color: white;
+}
+
 
 * {
     padding: 0;
@@ -741,9 +779,10 @@
 }
 
 .slider__wrap {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
+    margin-top: 30px;
 }
 
 .slider__viewport {
@@ -815,9 +854,18 @@
     background: red;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .slider {
         max-height: 340px;
+    }
+
+    .header__content,
+    .calc {
+        margin-bottom: 15px;
+        font-size: 15px;
+        margin: 0 auto;
+        display: grid;
+        justify-items: center;
     }
 }
 
@@ -826,9 +874,14 @@
         max-height: 240px;
     }
 
-    .header__content {
-        margin-bottom: 20px;
-        font-size: 15px;
+    .header__content,
+    .calc {
+        margin-bottom: 10px;
+        font-size: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+        display: grid;
+        justify-items: center;
     }
 
     .calc__fieldset {
