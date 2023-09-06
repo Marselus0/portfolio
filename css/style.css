@@ -186,12 +186,34 @@
     transition: 1s;
 }
 
+.container__home {
+    display: inline-block;
+    font-size: 40px;
+}
+
 .hero-heading {
     color: #fff;
-    font-size: 90px;
     text-transform: capitalize;
     font-weight: 300;
-    max-width: 800px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -205,17 +227,22 @@
         font-size: 70px;
     }
 
-    .project__heading {
-        font-size: 50px;
-    }
-}
-
-@media (max-width: 500px) {
-    .hero-heading {
+    .container__home {
+        display: inline-block;
         font-size: 30px;
     }
 }
 
+@media (max-width: 600px) {
+    .hero-heading {
+        font-size: 30px;
+    }
+
+    .container__home {
+        display: inline-block;
+        font-size: 25px;
+    }
+}
 
 .home-img {
     position: absolute;
@@ -578,7 +605,7 @@
     }
 
     .project__heading {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .project__btn-github {
@@ -639,6 +666,13 @@
     .contact__link {
         font-size: 20px;
     }
+
+    .contact__phone,
+    .contact__telegram,
+    .contact__address,
+    .contact__email {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -649,6 +683,13 @@
 
     .contacts__title {
         font-size: 20px;
+    }
+
+    .contact__phone,
+    .contact__telegram,
+    .contact__address,
+    .contact__email {
+        max-width: 320px;
     }
 }
 
@@ -772,4 +813,29 @@
 
 .slider__pagination .viewSlide.active {
     background: red;
+}
+
+@media (max-width: 800px) {
+    .slider {
+        max-height: 340px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider {
+        max-height: 240px;
+    }
+
+    .header__content {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .calc__fieldset {
+        margin-bottom: 10px;
+    }
+
+    .slider__control-button {
+        padding: 10px;
+    }
 }
