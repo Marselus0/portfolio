@@ -192,7 +192,7 @@
 }
 
 .hero-heading {
-    color: #fff;
+    color: #ffffff;
     text-transform: capitalize;
     font-weight: 300;
     overflow: hidden;
@@ -297,8 +297,7 @@
 }
 
 .about__image {
-    width: 100%;
-    width: 900px;
+    width: 80%;
     height: 600px;
     position: relative;
     overflow: hidden;
@@ -318,7 +317,7 @@
 }
 
 .about__image img.shown {
-    opacity: 0.3;
+    opacity: 0.4;
     height: 100%;
 }
 
@@ -804,7 +803,7 @@
 .slider {
     margin-bottom: 20px;
     width: calc(100% * 6);
-    height: 450px;
+    height: 500px;
     display: flex;
     justify-content: start;
     flex-wrap: nowrap;

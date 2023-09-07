@@ -7,12 +7,12 @@ let cost = 0;
 
 function calculateCost(){
     console.log('calc cost')
-    switch(Number(document.getElementById('percentWork').value)) {
+    switch(Number(document.getElementById('timeWork').value)) {
         case 0: cost = 0; break;
-        case 1: cost = 1000; break;
-        case 2: cost = 2000; break;
-        case 3: cost = 3000; break;
-        case 4: cost = 4000; break;
+        case 1: cost = 500; break;
+        case 2: cost = 1000; break;
+        case 3: cost = 1500; break;
+        case 4: cost = 2000; break;
     }
     console.log('cost => ' + cost )
 
@@ -20,7 +20,7 @@ function calculateCost(){
         return parseFloat(n).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1 ");
     }
 
-    totalCost = cost*(Number(document.getElementById('pageSide').value))*(Number(document.getElementById('timeWork').value))
+    totalCost = cost*(Number(document.getElementById('pageSide').value))*(Number(document.getElementById('percentWork').value))
     console.log('totalCost => ' + totalCost )
 
     document.getElementById('totalCost').innerHTML = makeMoney(totalCost);;
@@ -63,4 +63,12 @@ btnPrev.addEventListener('click', function () {
     }
     viewSliders[viewSlide].style.backgroundColor = 'red';
     slider.style.left = -viewSlide * viewport + 'px';
+
+    slider.forEach(item => {
+        item.style.width = width + 'px';
+        item.style.height = 'auto';
+    })
 });
+
+window.addEventListener('resize', init);
+init();
